@@ -1,12 +1,10 @@
-#include <iostream>
+#include <LTF.h>
 #include <iomanip>
+#include <iostream>
 
 using namespace std;
 
 int main()
 {
-  cout << "\n" << endl;
-
-  cout << "\n\n=====================" << endl;
-  return 0;
+    return 0;
 }

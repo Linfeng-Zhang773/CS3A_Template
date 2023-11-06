@@ -33,6 +33,15 @@ FetchContent_Declare(
   URL https://github.com/google/googletest/archive/609281088cfefc76f9d0ce82e1ff6c30cc3591e5.zip
 )
 
+## Fetch the content
+include(FetchContent)
+FetchContent_Declare(
+  LTF
+  GIT_REPOSITORY https://github.com/Serenity0204/Little-Test-Framework.git
+)
+FetchContent_MakeAvailable(LTF)
+
+
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
@@ -79,3 +88,5 @@ ADD_EXECUTABLE(testB
 TARGET_LINK_LIBRARIES(basic_test gtest)
 # TARGET_LINK_LIBRARIES(testA gtest)
 TARGET_LINK_LIBRARIES(testB gtest)
+
+TARGET_LINK_LIBRARIES(main PRIVATE LTF)
